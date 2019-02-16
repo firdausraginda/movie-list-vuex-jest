@@ -18,7 +18,7 @@
         @click="chooseDataFil()"
       >Pilih</a>
       <a
-        v-if="dataCard.choosen == true"
+        v-if="this.$route.name == 'personal' && dataCard.choosen == true"
         class="btn"
         @click="deleteDataFil()"
       >Hapus</a>
@@ -38,6 +38,9 @@ export default {
       type: Object,
       default: null
     }
+  },
+  created() {
+    // console.log(this.$route);
   },
   methods: {
     cutTextJudul(text) {
