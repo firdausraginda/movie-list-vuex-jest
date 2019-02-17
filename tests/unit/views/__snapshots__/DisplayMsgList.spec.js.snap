@@ -15,6 +15,13 @@ exports[`DisplayMsgList.spec.js has the expected html structure 1`] = `
       Cat
     
       </li>
+      <li
+        class="message-list-ul-li"
+      >
+        
+      Dog
+    
+      </li>
     </ul>
   </div>
 </div>

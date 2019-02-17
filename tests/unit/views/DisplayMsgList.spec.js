@@ -6,7 +6,7 @@ describe('DisplayMsgList.spec.js', () => {
     let wrapper;
     beforeEach(() => {
         wrapper = mount(DisplayMsgList)
-        wrapper.setData({ message: ['Cat'] });
+        wrapper.setData({ message: ['Cat','Dog'] });
     });
 
     test('is DisplayMsgList component', () => {
@@ -14,8 +14,12 @@ describe('DisplayMsgList.spec.js', () => {
         expect(wrapper.is('.display-message-list')).toBe(true)
     })
 
-    test('has received ["Cat"] as the message property', () => {
-        expect(wrapper.vm.message).toEqual(["Cat"])
+    test('message property has array type of data', () => {
+        expect(typeof wrapper.vm.message).toBe('object')
+    })
+
+    test('has received ["Cat", "Dog"] as the message property', () => {
+        expect(wrapper.vm.message).toEqual(["Cat", "Dog"])
     })
 
     test('has the expected html structure', () => {
@@ -32,8 +36,8 @@ describe('DisplayMsgList.spec.js', () => {
         expect(wrapper.find(MessageList).isEmpty()).toBe(false)
     })
 
-    test('MessageList has a "messagesProp" property equals to ["Cat"]', () => {
-        expect(wrapper.find(MessageList).vm.messagesProp).toEqual(["Cat"])
+    test('MessageList has a "messagesProp" property equals to ["Cat", "Dog]', () => {
+        expect(wrapper.find(MessageList).vm.messagesProp).toEqual(["Cat", "Dog"])
     })
 
 })
