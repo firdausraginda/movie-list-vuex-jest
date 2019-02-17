@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DisplayMsgList.spec.js has the expected html structure 1`] = `
+<div
+  class="display-message-list"
+>
+  <div
+    class="message-list"
+  >
+    <ul>
+      <li
+        class="message-list-ul-li"
+      >
+        
+      Cat
+    
+      </li>
+    </ul>
+  </div>
+</div>
+`;

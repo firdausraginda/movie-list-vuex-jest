@@ -5,7 +5,7 @@
       <div class="row">
         <Card
           :dataCard="film"
-          v-for="film in getDaftarFilm"
+          v-for="film in daftarFilm"
           :key="film.idFilm"
         />
       </div>
@@ -23,17 +23,21 @@ export default {
   name: "home",
   data() {
     return {
-      title: "Daftar Film"
+      title: "Daftar Film",
+      daftarFilm: []
     };
   },
   components: {
     Card
   },
-  computed: {
-    getDaftarFilm() {
-      return this.$store.state.daftarFilm;
-    }
+  created() {
+    this.getDaftarFilm()
   },
-  methods: {}
+  methods: {
+    getDaftarFilm() {
+      this.daftarFilm = this.$store.state.daftarFilm
+      // return this.$store.state.daftarFilm;
+    }
+  }
 };
 </script>

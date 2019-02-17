@@ -22,6 +22,11 @@ export default new Router({
       path: '/detailFilm/:id',
       name: 'detailFilm',
       component: () => import('./views/DetailFilm.vue')
+    },
+    {
+      path:'/displayMsgList',
+      name: 'displayMsgList',
+      component: () => import('./views/DisplayMsgList.vue')
     }
   ]
 })

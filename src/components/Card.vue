@@ -39,9 +39,6 @@ export default {
       default: null
     }
   },
-  created() {
-    // console.log(this.$route);
-  },
   methods: {
     cutTextJudul(text) {
       return `${text.substr(0, 30)}`;
