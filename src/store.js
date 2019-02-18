@@ -15,7 +15,8 @@ export default new Vuex.Store({
       { idFilm: 'liknqw761', choosen: false, imgFilm: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRKDLnA6_4vG0JtfYLSY2P20mVljG3Sp80fV3Tl6MVvYrhb2bE', judulFilm: 'Sierra Burgess Is a Loser', deskripsiFilm: 'Sierra Burgess Is a Loser adalah film komedi remaja Amerika Serikat yang disutradarai oleh Ian Samuels dari skenario oleh Lindsey Beer. Film ini menceritakan kembali kisah Cyrano de Bergerac yang modern dan dibintangi Shannon Purser, Kristine Froseth, RJ Cyler dan Noah Centineo.' },
       { idFilm: 'kjnqwe370', choosen: false, imgFilm: 'http://www.gstatic.com/tv/thumb/v22vodart/13343447/p13343447_v_v7_aa.jpg', judulFilm: 'I Am the Pretty Thing That Lives in the House', deskripsiFilm: 'I Am the Pretty Thing That Lives in the House adalah film horor Amerika-Kanada 2016 yang ditulis dan disutradarai oleh Osgood Perkins. Ini bintang Ruth Wilson sebagai perawat tinggal yang mencurigai rumah majikan lansia mungkin berhantu.' }
     ],
-    daftarFilmChoose: []
+    daftarFilmChoose: [],
+    valueCoba: 'lagi coba return state'
   },
   mutations: {
     mutateAddFilmChoosen(state, dataFilm) {

@@ -27,6 +27,11 @@ export default new Router({
       path:'/displayMsgList',
       name: 'displayMsgList',
       component: () => import('./views/DisplayMsgList.vue')
+    },
+    {
+      path: '/cobaReturnState',
+      name: 'cobaReturnState',
+      component: () => import('./views/CobaReturnState.vue')
     }
   ]
 })
