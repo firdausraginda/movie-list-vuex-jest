@@ -3,9 +3,9 @@
     <div class="container">
       <div class="row">
         <Card
-          :dataCard="film"
           v-for="film in getDaftarFilmChoose"
           :key="film.idFilm"
+          :dataCard="film"
         />
       </div>
     </div>
@@ -17,16 +17,15 @@ import Card from "../components/Card.vue";
 
 export default {
   data() {
-    return {
-    };
+    return {};
+  },
+  components: {
+    Card
   },
   computed: {
     getDaftarFilmChoose() {
       return this.$store.state.daftarFilmChoose;
     }
-  },
-  components: {
-      Card
   }
 };
 </script>

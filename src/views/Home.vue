@@ -4,9 +4,9 @@
     <div class="container">
       <div class="row">
         <Card
-          :dataCard="film"
           v-for="film in getDaftarFilm"
           :key="film.idFilm"
+          :dataCard="film"
         />
       </div>
     </div>
@@ -20,7 +20,6 @@
 import Card from "../components/Card.vue";
 
 export default {
-  name: "home",
   data() {
     return {
       title: "Daftar Film"

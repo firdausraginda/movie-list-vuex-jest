@@ -1,28 +1,22 @@
 import { shallowMount } from '@vue/test-utils'
-import Home from '../../../src/views/Home.vue'
+import Personal from '../../../src/views/Personal.vue'
 import Card from '../../../src/components/Card.vue'
 
-describe('Home.spec.js', () => {
+describe('Personal.spec.js', () => {
     let wrapper;
     beforeEach(() => {
-        wrapper = shallowMount(Home, {
+        wrapper = shallowMount(Personal, {
             computed: {
-                getDaftarFilm() {
+                getDaftarFilmChoose() {
                     return [{ idFilm: 'gans', choosen: false, imgFilm: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Black_mirror_bandersnatch_poster.jpg/220px-Black_mirror_bandersnatch_poster.jpg', judulFilm: 'Black Mirror: Bandersnatch', deskripsiFilm: 'Black Mirror: Bandersnatch adalah film interaktif tahun 2018 dalam seri antologi fiksi ilmiah Black Mirror. Film ini ditulis oleh pencipta serinya, Charlie Brooker, dan disutradarai oleh David Slade. Netflix merilisnya sebagai film terpisah pada tanggal 28 Desember 2018.' }]
                 }
             }
         })
-        wrapper.setData({ title: 'Daftar Film Asik' });
     })
 
-    test('is Home component', () => {
-        expect(wrapper.is(Home)).toBe(true)
-        expect(wrapper.is('.home')).toBe(true)
-    })
-
-    test('has "title" string type of data with "Daftar Film" value', () => {
-        expect(typeof wrapper.vm.title).toBe('string')
-        expect(wrapper.vm.title).toEqual('Daftar Film Asik')
+    test('is Personal component',  () => {
+        expect(wrapper.is(Personal)).toBe(true)
+        expect(wrapper.is('.personal')).toBe(true)
     })
 
     test('has the expected html structure', () => {
@@ -37,7 +31,7 @@ describe('Home.spec.js', () => {
         expect(wrapper.find(Card).exists()).toBe(true)
     })
 
-    test('Home has a "dataCard" property', () => {
+    test('Personal has a "dataCard" property', () => {
         expect(wrapper.find(Card).vm.dataCard.idFilm).toEqual('gans')
     })
 

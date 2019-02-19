@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Personal.spec.js has the expected html structure 1`] = `
+<div
+  class="personal"
+>
+  <div
+    class="container"
+  >
+    <div
+      class="row"
+    >
+      <card-stub
+        datacard="[object Object]"
+      />
+    </div>
+  </div>
+</div>
+`;
