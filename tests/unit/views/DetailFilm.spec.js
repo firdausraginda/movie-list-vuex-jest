@@ -37,7 +37,7 @@ describe('DetailFilm.spec.js', () => {
         expect(wrapper.element).toMatchSnapshot()
     })
 
-    test('"getDataFilmDetail is a funciton and exist', () => {
+    test('"getDataFilmDetail is a funciton and not null', () => {
         expect(typeof wrapper.vm.getDataFilmDetail).toBe('function')
         expect(wrapper.vm.getDataFilmDetail).not.toBeNull()
     })
