@@ -28,7 +28,7 @@ describe('DisplayMsgList.spec.js', () => {
 
     test('contains a MessageList component', () => {
         expect(wrapper.contains(MessageList)).toBe(true)
-        expect(wrapper.contains('.message-list')).toBe(true)
+        expect(wrapper.contains('.coba-aja')).toBe(true)
     })
 
     test('MessageList element exists and not empty', () => {

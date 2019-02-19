@@ -28,5 +28,4 @@ describe('MessageList.spec.js', () => {
         expect(wrapper.element).toMatchSnapshot()
     })
 
-
 })

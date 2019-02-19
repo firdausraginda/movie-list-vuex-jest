@@ -5,24 +5,28 @@ exports[`DisplayMsgList.spec.js has the expected html structure 1`] = `
   class="display-message-list"
 >
   <div
-    class="message-list"
+    class="coba-aja"
   >
-    <ul>
-      <li
-        class="message-list-ul-li"
-      >
-        
+    <div
+      class="message-list"
+    >
+      <ul>
+        <li
+          class="message-list-ul-li"
+        >
+          
       Cat
     
-      </li>
-      <li
-        class="message-list-ul-li"
-      >
-        
+        </li>
+        <li
+          class="message-list-ul-li"
+        >
+          
       Dog
     
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 `;

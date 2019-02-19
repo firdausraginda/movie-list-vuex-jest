@@ -1,5 +1,5 @@
 <template>
-  <div class="detailFilm">
+  <div class="detail-film">
     <img
       :src="dataFilm.imgFilm"
       alt=""
@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.detailFilm {
+.detail-film {
   padding: 0 150px;
   img {
     border-radius: 5px;

@@ -5,7 +5,7 @@ exports[`Home.spec.js has the expected html structure 1`] = `
   class="home"
 >
   <h2>
-    Daftar Film
+    Daftar Film Asik
   </h2>
    
   <div
