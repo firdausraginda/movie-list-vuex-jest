@@ -18,7 +18,7 @@
         @click="chooseDataFil()"
       >Pilih</a>
       <a
-        v-if="this.$route.name == 'personal' && dataCard.choosen == true"
+        v-if="dataCard.choosen == true"
         class="btn"
         @click="deleteDataFil()"
       >Hapus</a>
@@ -29,9 +29,7 @@
 <script>
 export default {
   data() {
-    return {
-      idFilmx: ""
-    };
+    return {};
   },
   props: {
     dataCard: {
@@ -66,13 +64,12 @@ export default {
 .card {
   border: none;
   text-align: left;
-  img {
+  .card-img-top {
     border-radius: 5px;
     height: 200px;
     object-fit: cover;
     margin-bottom: 20px;
   }
-
   .card-title {
     font-weight: bold;
   }
