@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card.spec.js has the expected html structure 1`] = `
+<div
+  class="card col-4"
+>
+  <div
+    class="card-body"
+  >
+    <img
+      alt="Card image cap"
+      class="card-img-top"
+      src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Black_mirror_bandersnatch_poster.jpg/220px-Black_mirror_bandersnatch_poster.jpg"
+    />
+     
+    <h5
+      class="card-title"
+    >
+      Black Mirror: Bandersnatch
+    </h5>
+     
+    <p>
+      Black Mirror: Bandersnatch adalah film interaktif tahun 2018 dalam seri antologi fiksi ilmiah Black ..
+    </p>
+     
+    <a
+      class="btn btn-primary moveToDetail"
+    >
+      Detail
+    </a>
+     
+    <a
+      class="btn chooseDataFilm"
+    >
+      Pilih
+    </a>
+     
+    <!---->
+  </div>
+</div>
+`;

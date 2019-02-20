@@ -9,18 +9,18 @@
       <h5 class="card-title">{{cutTextJudul(dataCard.judulFilm)}}</h5>
       <p>{{cutTextDeskripsi(dataCard.deskripsiFilm)}}</p>
       <a
-        class="btn btn-primary"
+        class="btn btn-primary moveToDetail"
         @click="moveToDetail()"
       >Detail</a>
       <a
         v-if="dataCard.choosen == false"
-        class="btn"
-        @click="chooseDataFil()"
+        class="btn chooseDataFilm"
+        @click="chooseDataFilm()"
       >Pilih</a>
       <a
-        v-if="dataCard.choosen == true"
-        class="btn"
-        @click="deleteDataFil()"
+        v-if="dataCard.choosen == true && this.$route.name == 'personal'"
+        class="btn deleteDataFilm"
+        @click="deleteDataFilm()"
       >Hapus</a>
     </div>
   </div>
@@ -47,10 +47,10 @@ export default {
     moveToDetail() {
       this.$router.push({ path: `/detailFilm/${this.dataCard.idFilm}` });
     },
-    chooseDataFil() {
+    chooseDataFilm() {
       this.$store.dispatch("addDataFilmChoosen", this.dataCard);
     },
-    deleteDataFil() {
+    deleteDataFilm() {
       this.$store.dispatch("deleteDataFilmChoosen", this.dataCard);
     }
   }
