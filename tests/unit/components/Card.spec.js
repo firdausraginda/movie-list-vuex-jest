@@ -1,4 +1,4 @@
-import { shallowMount, createLocalVue } from '@vue/test-utils'
+import { shallowMount, createLocalVue, mount } from '@vue/test-utils'
 import Card from '../../../src/components/Card.vue'
 import Vuex from 'vuex'
 
@@ -24,14 +24,17 @@ describe('Card.spec.js', () => {
                 dataCard: { idFilm: 'gans', choosen: false, imgFilm: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Black_mirror_bandersnatch_poster.jpg/220px-Black_mirror_bandersnatch_poster.jpg', judulFilm: 'Black Mirror: Bandersnatch', deskripsiFilm: 'Black Mirror: Bandersnatch adalah film interaktif tahun 2018 dalam seri antologi fiksi ilmiah Black Mirror. Film ini ditulis oleh pencipta serinya, Charlie Brooker, dan disutradarai oleh David Slade. Netflix merilisnya sebagai film terpisah pada tanggal 28 Desember 2018.' }
             },
             methods: {
+                cekBtnChooseDataFilm() {
+                    return this.dataCard.choosen == false
+                },
+                cekBtnDeleteDataFilm() {
+                    return this.dataCard.choosen == false
+                },
                 cutTextJudul(text) {
                     return `${text.substr(0, 30)}`;
                 },
                 cutTextDeskripsi(text) {
                     return `${text.substr(0, 100)}..`;
-                },
-                moveToDetail() {
-                    this.$router.push({ path: `/detailFilm/${this.dataCard.idFilm}` });
                 },
                 chooseDataFilm() {
                     this.$store.dispatch("addDataFilmChoosen", this.dataCard);
@@ -81,9 +84,8 @@ describe('Card.spec.js', () => {
 
     test('dispatches "deleteDataFilmChoosen" when "deleteDataFilm" being called', () => {
         let btnDeleteDataFilm = wrapper.find('.deleteDataFilm')
-        expect(btnDeleteDataFilm.exists()).toBe(true)
-        // btnDeleteDataFilm.trigger('click')
-        // expect(actions.deleteDataFilmChoosen).toHaveBeenCalled()
+        btnDeleteDataFilm.trigger('click')
+        expect(actions.deleteDataFilmChoosen).toHaveBeenCalled()
     })
 
 })

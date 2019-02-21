@@ -35,7 +35,11 @@ exports[`Card.spec.js has the expected html structure 1`] = `
       Pilih
     </a>
      
-    <!---->
+    <a
+      class="btn deleteDataFilm"
+    >
+      Hapus
+    </a>
   </div>
 </div>
 `;

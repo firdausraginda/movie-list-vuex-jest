@@ -13,12 +13,12 @@
         @click="moveToDetail()"
       >Detail</a>
       <a
-        v-if="dataCard.choosen == false"
+        v-if="cekBtnChooseDataFilm()"
         class="btn chooseDataFilm"
         @click="chooseDataFilm()"
       >Pilih</a>
       <a
-        v-if="dataCard.choosen == true && this.$route.name == 'personal'"
+        v-if="cekBtnDeleteDataFilm()"
         class="btn deleteDataFilm"
         @click="deleteDataFilm()"
       >Hapus</a>
@@ -38,6 +38,12 @@ export default {
     }
   },
   methods: {
+    cekBtnChooseDataFilm(){
+      return this.dataCard.choosen == false
+    },
+    cekBtnDeleteDataFilm(){
+      return this.dataCard.choosen == true && this.$route.name == 'personal'
+    },
     cutTextJudul(text) {
       return `${text.substr(0, 30)}`;
     },
